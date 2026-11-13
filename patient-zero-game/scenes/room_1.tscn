@@ -1,0 +1,174 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/backgrounds/medical_room.png" id="1_bg"]
+[ext_resource type="Texture2D" path="res://assets/ui/key_icon.png" id="2_key"]
+[ext_resource type="Script" path="res://scripts/room_1.gd" id="3_script"]
+
+[node name="Room1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_script")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_bg")
+stretch_mode = 6
+
+[node name="Tint" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.015, 0.025, 0.04, 0.13)
+
+[node name="WorldHotspots" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ComputerHotspot" type="Button" parent="WorldHotspots"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 250.0
+offset_right = 340.0
+offset_bottom = 350.0
+text = "⌕"
+
+[node name="ComputerLabel" type="Label" parent="WorldHotspots"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 350.0
+offset_right = 410.0
+offset_bottom = 390.0
+text = "INSPECT COMPUTER"
+horizontal_alignment = 1
+
+[node name="DoorHotspot" type="Button" parent="WorldHotspots"]
+layout_mode = 0
+offset_left = 885.0
+offset_top = 250.0
+offset_right = 985.0
+offset_bottom = 350.0
+text = "⌕"
+
+[node name="DoorLabel" type="Label" parent="WorldHotspots"]
+layout_mode = 0
+offset_left = 845.0
+offset_top = 350.0
+offset_right = 1025.0
+offset_bottom = 390.0
+text = "LOCKED EXIT"
+horizontal_alignment = 1
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TimerLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 20.0
+offset_right = 175.0
+offset_bottom = 70.0
+text = "01:00"
+
+[node name="AttemptsLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 20.0
+offset_right = 380.0
+offset_bottom = 70.0
+text = "ATTEMPTS: 3/3"
+
+[node name="InstructionLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 635.0
+offset_right = 990.0
+offset_bottom = 700.0
+text = "Tap the computer search icon, solve the logic puzzle, collect the key, and escape."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PauseButton" type="Button" parent="HUD"]
+layout_mode = 0
+offset_left = 1190.0
+offset_top = 20.0
+offset_right = 1255.0
+offset_bottom = 80.0
+text = "Ⅱ"
+
+[node name="ComputerPuzzle" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 340.0
+offset_top = 95.0
+offset_right = 940.0
+offset_bottom = 625.0
+
+[node name="PanelContent" type="VBoxContainer" parent="ComputerPuzzle"]
+layout_mode = 2
+
+[node name="KeyReward" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 420.0
+offset_top = 125.0
+offset_right = 860.0
+offset_bottom = 600.0
+
+[node name="RewardContent" type="VBoxContainer" parent="KeyReward"]
+layout_mode = 2
+
+[node name="KeyImage" type="TextureRect" parent="KeyReward"]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 110.0
+offset_right = 295.0
+offset_bottom = 260.0
+mouse_filter = 2
+texture = ExtResource("2_key")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="GameOverPanel" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 390.0
+offset_top = 190.0
+offset_right = 890.0
+offset_bottom = 530.0
+
+[node name="GameOverContent" type="VBoxContainer" parent="GameOverPanel"]
+layout_mode = 2
+
+[node name="PausePanel" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 430.0
+offset_top = 180.0
+offset_right = 850.0
+offset_bottom = 530.0
+
+[node name="PauseContent" type="VBoxContainer" parent="PausePanel"]
+layout_mode = 2

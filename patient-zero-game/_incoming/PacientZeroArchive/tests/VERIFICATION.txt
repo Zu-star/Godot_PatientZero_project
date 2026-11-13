@@ -1,0 +1,74 @@
+Godot 4.4.1 stable, Compatibility renderer.
+
+Godot Engine v4.4.1.stable.official.49a5bc7b6 - https://godotengine.org
+
+PASS: Code cannot bypass shelf puzzle
+PASS: Cannot collect card from locked box
+PASS: Door cannot unlock without card
+PASS: Interactive node exists: QuarantineDoor
+PASS: Door stays locked on initial tap
+PASS: Interactive node exists: Desk
+PASS: Interactive node exists: BrokenLaptop
+PASS: Laptop interaction text
+PASS: Interactive node exists: FramedPhoto
+PASS: Woman photo can be inspected before solving shelf
+PASS: Interactive node exists: Close
+PASS: Interactive node exists: Back
+PASS: Interactive node exists: ArchiveShelf
+PASS: Interactive node exists: ArchiveBox3
+PASS: Records gated before sorting
+PASS: Interactive node exists: RolledNote
+PASS: Hidden rolled note reveals readable rules
+PASS: Interactive node exists: Close
+PASS: Interactive node exists: ArchiveLabel1
+PASS: Interactive node exists: ArchiveLabel3
+PASS: Animated label swap solves exact unique order
+PASS: Final label order matches rules
+PASS: Interactive node exists: ArchiveLabel3
+PASS: Transfers reveals records and box together
+PASS: Interactive node exists: TransferRecords
+PASS: Interactive node exists: NextRecord
+PASS: Can browse to matching woman agent
+PASS: Interactive node exists: NextRecord
+PASS: Interactive node exists: NextRecord
+PASS: Records cycle without losing progress
+PASS: Interactive node exists: Close
+PASS: Interactive node exists: ChainedBox
+PASS: Interactive node exists: Digit0
+PASS: Interactive node exists: UnlockBox
+PASS: Incomplete code rejected
+PASS: Interactive node exists: Digit0
+PASS: Interactive node exists: Digit0
+PASS: Interactive node exists: Digit0
+PASS: Interactive node exists: UnlockBox
+PASS: Wrong code rejected and cleared
+PASS: Interactive node exists: Digit7
+PASS: Interactive node exists: Digit4
+PASS: Interactive node exists: Digit1
+PASS: Interactive node exists: Digit6
+PASS: Interactive node exists: UnlockBox
+PASS: Code opens box but requires collecting card
+PASS: Interactive node exists: CollectCard
+PASS: Card added to inventory
+PASS: Card cannot be collected twice
+PASS: Interactive node exists: Back
+PASS: Interactive node exists: Back
+PASS: Interactive node exists: InventoryCard
+PASS: Interactive node exists: CardReader
+PASS: Inventory card must be selected
+PASS: Interactive node exists: InventoryCard
+PASS: Interactive node exists: CardReader
+PASS: Selected card unlocks quarantine door
+PASS: Interactive node exists: OpenDoor
+PASS: Exit completes level and emits transition signal
+PASS: Completion signal fires once
+PASS: Save/load restores puzzle and inventory state
+PASS: Restart clears progression
+RESULT: 62 checks, 0 failures
+
+Godot Engine v4.4.1.stable.official.49a5bc7b6 - https://godotengine.org
+
+PASS: GUI pointer navigation, laptop hit area, and touch-to-mouse photo interaction
+
+Rendered screens inspected: room, desk, shelf, rules, discovery, records, keypad, open box/card, completion.
+Physical phone testing / APK / IPA export: not performed.

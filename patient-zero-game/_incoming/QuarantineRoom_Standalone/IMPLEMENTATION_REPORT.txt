@@ -1,0 +1,36 @@
+IMPLEMENTATION REPORT — QUARANTINE ROOM
+
+Archive Room inspection
+- Project declares Godot 4.4 or later, GL Compatibility renderer, 1280×720 viewport, canvas_items stretch, keep aspect, landscape orientation.
+- Existing level uses a Control root, named View/HUD/Modal layers, reusable StyleBoxFlat panels/buttons, transparent Button hotspots, Escape/back navigation, modal scrim, bottom inventory strip, sound effects and persistent JSON state in an autoload.
+- Reusable source assets copied: ambient.wav, click.wav, release.wav. UI/helper conventions and the save-state approach were adapted for this level. The complete Archive Room scene and unrelated level logic were excluded.
+- The Archive Room project includes its own playthrough/input test sources and prior verification notes; those are not evidence that this new level has passed runtime tests.
+
+Quarantine image inventory
+- Main background: quarantine_room.jpg (1024×572).
+- Close-ups (all 1376×768): bed.jpg, bracelet.jpg, table.jpg, q09.jpg, q17.jpg, q31.jpg, code.jpg, instruction.jpg, fusebox.jpg, terminal.jpg, card.jpg.
+- Roles are documented in README.txt. All supplied images are included and used.
+- The table artwork shows three patient folders plus a yellow loose-paper/folder-shaped prop; only the three patient folders are interactive records.
+
+Reused/adapted
+- Copied Archive Room audio: ambient.wav, click.wav, release.wav.
+- Adapted UI conventions: reusable panels/labels/buttons, transparent hotspots, hover feedback, modal scrim, back stack, inventory strip, pause menu, hotspot debug toggle, save/load pattern.
+- Archive Room's main level and save singleton were not copied because they implement a different puzzle and would bring unrelated level content into this standalone project.
+
+Created for this level
+- One runnable main scene and a dedicated GDScript controller.
+- Room hotspots, supplied-image close-up navigation, three independent patient records, leading-zero numeric keypad, cabinet/fuse/instruction interactions, item selection and item-on-object use, switch-sequence logic, date keypad/authentication, card collection, door unlocking, completion screen, pause/restart controls and JSON persistence.
+
+Tests actually performed
+- Inspected both ZIP file inventories.
+- Opened/visually inspected all 12 supplied images and recorded dimensions/purpose.
+- Confirmed the project entry scene and all referenced asset paths exist.
+- Confirmed the standalone ZIP contains the expected project and dependencies after packaging.
+- Godot runtime tests were NOT performed: no Godot executable was available in the environment. See README.txt.
+
+
+FOLLOW-UP FIX (2026-10-24)
+- Repositioned date/code keypad buttons and Cancel/Confirm controls to avoid visual overlap.
+- Correct terminal date continues to set authentication and unlock the card compartment, then closes the modal and refreshes the terminal view.
+- Updated door messaging and completion screen to identify the Laboratory as the next/final room. Continue opens a dedicated Laboratory — Final Room transition screen.
+- Godot runtime is still unavailable in this environment, so these changes have not been engine-run tested.

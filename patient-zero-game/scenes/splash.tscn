@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dmn3eq2tn3rab"]
+
+[ext_resource type="Texture2D" uid="uid://d30fdlwxjg3qb" path="res://assets/backgrounds/splash_icon_art.png" id="1_bg"]
+[ext_resource type="Script" uid="uid://ba5ytm6k6ek2r" path="res://scripts/splash.gd" id="2_script"]
+
+[node name="SplashScreen" type="Control" unique_id=386612036]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_script")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1572037414]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_bg")
+expand_mode = 1
+stretch_mode = 6

@@ -1,0 +1,18 @@
+MANUAL GODOT TEST CHECKLIST (NOT YET RUN IN THIS ENVIRONMENT)
+
+[ ] Import project.godot in Godot 4.4.x and press F5.
+[ ] Room background renders as one continuous image.
+[ ] Patient Bed opens bed.jpg; bracelet hotspot opens bracelet.jpg and shows exact ID/date/status.
+[ ] Desk/table opens table.jpg; Folder A, B, C each open their own supplied record image.
+[ ] Cabinet keypad accepts 042 (including leading zero), rejects other values, supports CLR and backspace.
+[ ] Open cabinet: fuse can be collected once; instruction sheet opens and can be revisited.
+[ ] Select fuse in inventory and click socket; fuse becomes installed and cannot be duplicated.
+[ ] Try a wrong switch first/order; progress resets but fuse stays installed.
+[ ] POWER → COOLING → SYSTEM sets power_restored and updates switch indicators.
+[ ] Terminal is offline before power; after power it accepts 14.05 and rejects other dates.
+[ ] Authentication unlocks card compartment; card can be collected once.
+[ ] Door rejects no-card / unselected-card interaction; selected card unlocks it, second tap completes level.
+[ ] Back/Escape returns to previous view; modal overlay blocks hidden hotspots.
+[ ] Menu, hotspot toggle, sound toggle, restart and save/load behave correctly.
+
+Automated runtime test status: NOT RUN — Godot executable unavailable in the packaging environment.
